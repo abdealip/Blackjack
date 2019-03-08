@@ -9,9 +9,9 @@ class Deck:
         for i in range(numDecks):
             for s in ["Spades", "Hearts", "Diamonds", "Clubs"]:
                 for r in range(2, 11):
-                    self.cards.append(Card(s, str(r)))
+                    self.cards.append(Card(str(r), s))
                 for r in ["Jack", "Queen", "King", "Ace"]:
-                    self.cards.append(Card(s, str(r)))
+                    self.cards.append(Card(str(r), s))
         if self.shuffle:
             random.shuffle(self.cards)
     def reset(self):

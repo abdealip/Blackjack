@@ -1,24 +1,5 @@
 import random
 
-class Player:
-    def __init__(self, player):
-        self.hand = Hand()
-        #is_dealer is a bool
-        self.money = is_dealer*100
-    def deal_hand(self, deck):
-        self.hand.add_card(deck)
-        self.hand.add_card(deck)
-
-    def add_card(self, deck):
-        self.hand.add_card(deck)
-    def bust(self):
-        pass
-
-class NonDealer(Player):
-    def get_input(self):
-        pass
-
-
 def blackjack():
     deck = []
     for i in ["Spades", "Hearts", "Clubs", "Diamonds"]:
