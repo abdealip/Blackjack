@@ -7,10 +7,11 @@ class Deck:
         self.next = 0
         self.shuffle = doshuffle
         for i in range(numDecks):
-            for s in ["Spades", "Hearts", "Diamonds", "Clubs"]:
-                for r in range(2, 11):
+            for r in range(2, 11):
+                for s in ["Spades", "Hearts", "Diamonds", "Clubs"]:
                     self.cards.append(Card(str(r), s))
-                for r in ["Jack", "Queen", "King", "Ace"]:
+            for r in ["Jack", "Queen", "King", "Ace"]:
+                for s in ["Spades", "Hearts", "Diamonds", "Clubs"]:
                     self.cards.append(Card(str(r), s))
         if self.shuffle:
             random.shuffle(self.cards)
