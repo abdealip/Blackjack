@@ -51,6 +51,12 @@ class NonDealer(Player):
             satisfaction = False
             while not self.hands[i].bust() and not satisfaction:
                 print("Your hand\n" + str(self.hands[i]))
+                if self.hands[i].double_down():
+                    self.hands[i].add_card(deck)
+                    self.hands[i].bet*= 2
+                    print(self.hands[i])
+                    satisfaction = True
+                    break
                 decision = input("Type h to hit or s to stand, then hit Enter: ")
                 if decision == "s":
                     satisfaction = True

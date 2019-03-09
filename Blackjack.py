@@ -35,7 +35,7 @@ class Game:
         if self.dealer.hand.bust():
             for p in range(len(self.players)):
                 for h in range(len(self.players[p].hands)):
-                    print(self.players[p].name)
+                    print(self.players[p].name + ":")
                     print(self.players[p].hands[h])
                     if not self.players[p].hands[h].bust():
                         self.players[p].updateMoney(True, h)
@@ -45,6 +45,8 @@ class Game:
         else:
             for p in range(len(self.players)):
                 for h in range(len(self.players[p].hands)):
+                    print(self.players[p].name + ":")
+                    print(self.players[p].hands[h])
                     if self.players[p].hands[h].bust():     #if the player busts they lose regardless
                         self.players[p].updateMoney(False, h)
                     elif self.players[p].hands[h].score > self.dealer.hand.score:

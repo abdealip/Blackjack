@@ -37,6 +37,14 @@ class Hand:
         hand2.cards.append(self.cards[1])
         self.cards.pop()
         return(hand2)
+    def double_down(self):
+        dd = False
+        if self.score in range(9, 12) and self.size() == 2:  #9, 10, or 11
+            print("Would you like to double down?")
+            answer = input("Type y for yes, n for no: ")
+            if answer == "y":
+                dd = True
+        return(dd)
     def __str__(self):
         answer = ""
         for i in range(len(self.cards)):
