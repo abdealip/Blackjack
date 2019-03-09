@@ -1,7 +1,4 @@
 import random
-from Card import *
-from Deck import *
-from Hand import *
 from Players import *
 
 class Game:
